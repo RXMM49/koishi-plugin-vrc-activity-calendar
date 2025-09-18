@@ -1,7 +1,6 @@
 # koishi-plugin-vrchateventcalendar
 
 [![npm](https://img.shields.io/npm/v/koishi-plugin-vrchateventcalendar)](https://www.npmjs.com/package/koishi-plugin-vrchateventcalendar)
-[![npm](https://www.npmjs.com/package/koishi-plugin-vrchateventcalendar)](https://www.npmjs.com/package/koishi-plugin-vrchateventcalendar)
 
 获取 VRChat 活动日历并推送给用户
 
