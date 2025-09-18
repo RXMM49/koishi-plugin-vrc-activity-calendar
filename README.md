@@ -4,6 +4,12 @@
 
 获取 VRChat 活动日历并推送给用户
 
+## 支持的活动日历
+
+日本
+中国
+其余国家待更新中......
+
 ## 功能介绍
 
 这是一个用于 Koishi 机器人框架的插件，可以自动抓取 VRChat 活动信息并以美观的日历形式展示。主要功能包括：
@@ -38,7 +44,7 @@
 
 插件提供以下命令：
 
-- `vrchat活动刷新` / `活动刷新` / `vrchat活动` / `VRChat活动` - 手动获取并发送最新的活动信息
+- `vrchat活动刷新` / `vrchat活动中国` / `vrchat活动日本` / `VRChat活动日历` - 手动获取并发送最新的活动信息
 
 ### 自动推送
 
@@ -46,7 +52,7 @@
 
 ## 工作原理
 
-1. 插件使用 Puppeteer 访问配置的网站（默认为 https://vrceve.com/）
+1. 插件使用 Puppeteer 访问配置的网站（默认为 https://vrceve.com/与https://rlvrc.cn/event-showcase）
 2. 解析页面中的 Google Calendar iframe
 3. 提取活动信息并缓存
 4. 根据当前时间确定当前活动、上一个活动和下一个活动
