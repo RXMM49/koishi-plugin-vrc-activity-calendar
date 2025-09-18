@@ -1,15 +1,15 @@
 # koishi-plugin-vrchateventcalendar
 
 [![npm](https://img.shields.io/npm/v/koishi-plugin-vrchateventcalendar)](https://www.npmjs.com/package/koishi-plugin-vrchateventcalendar)
-[![github](https://github.com/RXMM49/koishi-plugin-vrchateventcalendar)](https://github.com/RXMM49/koishi-plugin-vrchateventcalendar)
+[![github](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mashape/apistatus.svg)
 
 获取 VRChat 活动日历并推送给用户
 
 ## 支持的活动日历
 
-日本
-中国
-其余国家待更新中......
+- 日本
+- 中国
+- 其余国家待更新中......
 
 ## 功能介绍
 
@@ -24,6 +24,9 @@
 
 在 Koishi 控制台中搜索 `vrchateventcalendar` 或使用以下命令安装：
 
+```bash
+npm install koishi-plugin-vrchateventcalendar
+```
 
 > 注意：该插件依赖 `puppeteer` 插件，请确保已安装并启用。
 
@@ -33,11 +36,16 @@
 |--------|------|--------|------|
 | updateInterval | number | 30 | 自动更新间隔(分钟) |
 | maxActivities | number | 10 | 最多显示活动数量 |
-| websiteUrl | string | https://vrceve.com/ ，|https://rlvrc.cn/event-showcase| 目标网站URL |
 | scrapeDelay | number | 5000 | 网页加载后等待时间(毫秒) |
-| autoPush | boolean | false | 是否启用自动推送 |
-| autoPushInterval | number | 60 | 自动推送间隔(分钟) |
-| autoPushTarget | string | '' | 自动推送目标 |
+| autoPush | object | {} | 自动推送设置 |
+| autoPush.japan | object | {} | 日本活动推送设置 |
+| autoPush.japan.enabled | boolean | false | 是否启用日本活动自动推送 |
+| autoPush.japan.interval | number | 60 | 日本活动自动推送间隔(分钟) |
+| autoPush.japan.target | string | '' | 日本活动推送目标 (格式: 平台:频道ID) |
+| autoPush.china | object | {} | 中国活动推送设置 |
+| autoPush.china.enabled | boolean | false | 是否启用中国活动自动推送 |
+| autoPush.china.interval | number | 60 | 中国活动自动推送间隔(分钟) |
+| autoPush.china.target | string | '' | 中国活动推送目标 (格式: 平台:频道ID) |
 
 ## 使用方法
 
@@ -45,7 +53,9 @@
 
 插件提供以下命令：
 
-- `vrchat活动刷新` / `vrchat活动中国` / `vrchat活动日本` / `VRChat活动日历` - 手动获取并发送最新的活动信息
+- `vrchat活动刷新` - 获取中日VRChat活动信息
+- `vrchat活动日本` - 获取日本VRChat活动信息
+- `vrchat活动中国` - 获取中国VRChat活动信息
 
 ### 自动推送
 
@@ -53,8 +63,8 @@
 
 ## 工作原理
 
-1. 插件使用 Puppeteer 访问配置的网站（默认为 | https://vrceve.com/| 与| https://rlvrc.cn/event-showcase| ）
-2. 解析页面中的 Google Calendar iframe
+1. 插件使用 Puppeteer 访问配置的网站（默认为 https://vrceve.com/ 与 https://rlvrc.cn/event-showcase）
+2. 解析页面中的活动信息
 3. 提取活动信息并缓存
 4. 根据当前时间确定当前活动、上一个活动和下一个活动
 5. 生成包含日历和活动信息的图片
@@ -65,3 +75,4 @@
 - 首次运行时可能需要较长时间加载，因为需要安装 Puppeteer 的浏览器组件
 - 插件依赖网络访问，确保服务器可以正常访问配置的网站
 - 生成图片需要一定性能，低配置服务器可能需要较长时间
+```
