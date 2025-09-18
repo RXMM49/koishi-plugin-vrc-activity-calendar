@@ -75,4 +75,3 @@ npm install koishi-plugin-vrchateventcalendar
 - 首次运行时可能需要较长时间加载，因为需要安装 Puppeteer 的浏览器组件
 - 插件依赖网络访问，确保服务器可以正常访问配置的网站
 - 生成图片需要一定性能，低配置服务器可能需要较长时间
-```
