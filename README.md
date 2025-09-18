@@ -1,6 +1,7 @@
 # koishi-plugin-vrchateventcalendar
 
 [![npm](https://img.shields.io/npm/v/koishi-plugin-vrchateventcalendar)](https://www.npmjs.com/package/koishi-plugin-vrchateventcalendar)
+[![github](https://github.com/RXMM49/koishi-plugin-vrchateventcalendar)](https://github.com/RXMM49/koishi-plugin-vrchateventcalendar)
 
 获取 VRChat 活动日历并推送给用户
 
@@ -32,7 +33,7 @@
 |--------|------|--------|------|
 | updateInterval | number | 30 | 自动更新间隔(分钟) |
 | maxActivities | number | 10 | 最多显示活动数量 |
-| websiteUrl | string | https://vrceve.com/ | 目标网站URL |
+| websiteUrl | string | https://vrceve.com/ ，|https://rlvrc.cn/event-showcase| 目标网站URL |
 | scrapeDelay | number | 5000 | 网页加载后等待时间(毫秒) |
 | autoPush | boolean | false | 是否启用自动推送 |
 | autoPushInterval | number | 60 | 自动推送间隔(分钟) |
@@ -52,7 +53,7 @@
 
 ## 工作原理
 
-1. 插件使用 Puppeteer 访问配置的网站（默认为 https://vrceve.com/与https://rlvrc.cn/event-showcase）
+1. 插件使用 Puppeteer 访问配置的网站（默认为 | https://vrceve.com/| 与| https://rlvrc.cn/event-showcase| ）
 2. 解析页面中的 Google Calendar iframe
 3. 提取活动信息并缓存
 4. 根据当前时间确定当前活动、上一个活动和下一个活动
