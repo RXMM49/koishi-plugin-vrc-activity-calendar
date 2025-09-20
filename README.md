@@ -1,6 +1,6 @@
-# koishi-plugin-vrchateventcalendar
+# koishi-plugin-vrc-activity-calendar
 
-[![npm](https://img.shields.io/npm/v/koishi-plugin-vrchateventcalendar)](https://www.npmjs.com/package/koishi-plugin-vrchateventcalendar)
+[![npm](https://img.shields.io/npm/v/koishi-plugin-vrc-activity-calendar)](https://www.npmjs.com/package/koishi-plugin-vrc-activity-calendar)
 [![github](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mashape/apistatus.svg)
 
 获取 VRChat 活动日历并推送给用户
@@ -22,10 +22,10 @@
 
 ## 安装
 
-在 Koishi 控制台中搜索 `vrchateventcalendar` 或使用以下命令安装：
+在 Koishi 控制台中搜索 `vrc-activity-calendar` 或使用以下命令安装：
 
 ```bash
-npm install koishi-plugin-vrchateventcalendar
+npm install koishi-plugin-vrc-activity-calendar
 ```
 
 > 注意：该插件依赖 `puppeteer` 插件，请确保已安装并启用。
