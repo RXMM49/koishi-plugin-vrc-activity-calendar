@@ -34,6 +34,7 @@
   "dependencies": {
     "axios": "^1.5.0",
     "cheerio": "^1.1.2",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^3.3.2",
+    "@google-cloud/translate": "^7.0.0"
   }
 }
